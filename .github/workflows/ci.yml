@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: studio
+
+      # The four real packages, side by side. Node refuses the `https://`
+      # imports this facade uses, so the tests supply the packages instead.
+      # They are the real ones: a stub would only test the stub.
+      # algo's split lives on a branch until it merges.
+      - uses: actions/checkout@v4
+        with: { repository: jmonlabs/algo, path: algo, ref: claude/jmon-algo-learning-i5wsrp }
+      - uses: actions/checkout@v4
+        with: { repository: jmonlabs/io, path: io }
+      - uses: actions/checkout@v4
+        with: { repository: jmonlabs/show, path: show }
+      - uses: actions/checkout@v4
+        with: { repository: jmonlabs/sound, path: sound }
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Unit tests
+        working-directory: studio
+        run: node --test tests/*.test.js

@@ -1,0 +1,15 @@
+{
+  "name": "@jmon/studio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "One way in: assembles jmon/algo, jmon/io, jmon/show and jmon/sound and binds the injections.",
+  "type": "module",
+  "license": "GPL-3.0-or-later",
+  "author": "JMON Labs",
+  "repository": { "type": "git", "url": "git+https://github.com/jmonlabs/studio.git" },
+  "bugs": { "url": "https://github.com/jmonlabs/studio/issues" },
+  "homepage": "https://github.com/jmonlabs/studio#readme",
+  "keywords": ["jmon", "algorithmic-composition", "generative-music", "midi", "musicxml", "tone.js", "music"],
+  "peerDependencies": { "tone": "^14.8.49", "verovio": "^5.6.0" },
+  "peerDependenciesMeta": { "tone": { "optional": true }, "verovio": { "optional": true } }
+}

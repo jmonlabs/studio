@@ -20,9 +20,8 @@ jobs:
       # The four real packages, side by side. Node refuses the `https://`
       # imports this facade uses, so the tests supply the packages instead.
       # They are the real ones: a stub would only test the stub.
-      # algo's split lives on a branch until it merges.
       - uses: actions/checkout@v4
-        with: { repository: jmonlabs/algo, path: algo, ref: claude/jmon-algo-learning-i5wsrp }
+        with: { repository: jmonlabs/algo, path: algo }
       - uses: actions/checkout@v4
         with: { repository: jmonlabs/io, path: io }
       - uses: actions/checkout@v4

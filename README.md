@@ -23,8 +23,10 @@ const piece = {
 };
 
 jm.play(piece);           // a player
-jm.score(piece);          // engraved
 jm.midi(piece);           // a .mid download link
+
+// These two render before they can hand back anything, so both are promises.
+await jm.score(piece);    // engraved
 await jm.wav(piece);      // a .wav download link, after an offline render
 ```
 

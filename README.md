@@ -22,10 +22,10 @@ const piece = {
   }],
 };
 
-jm.play(piece);     // a player
-jm.score(piece);    // engraved
-jm.midi(piece);     // a .mid download
-jm.wav(piece);      // a .wav download
+jm.play(piece);           // a player
+jm.score(piece);          // engraved
+jm.midi(piece);           // a .mid download link
+await jm.wav(piece);      // a .wav download link, after an offline render
 ```
 
 ## What is behind it

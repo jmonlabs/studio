@@ -101,17 +101,14 @@ export default async function studio(options = {}) {
   const audioDeps = { Tone, io, sound };
   const scoreDeps = { io, verovio, VerovioToolkit };
 
+  // Composing: algo's whole surface, whatever algo calls its spaces (key,
+  // notes, performance, theory, generative, analysis…), so a space added
+  // there appears here without a change. algo's own VERSION is left out.
+  const { VERSION: _algoVersion, ...composing } = algo;
+
   return {
     VERSION,
-
-    // Composing — algo's whole surface, unchanged.
-    key: algo.key,
-    theory: algo.theory,
-    generative: algo.generative,
-    processors: algo.processors,
-    analysis: algo.analysis,
-    constants: algo.constants,
-    utils: algo.utils,
+    ...composing,
 
     // Hearing and seeing.
     play: (piece, extra = {}) => show.play(piece, { ...audioDeps, ...extra }),

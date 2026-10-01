@@ -113,7 +113,7 @@ test("master is show's, and the players are wrappers rather than passthroughs", 
 
 test("jm.key builds a scale through algo", async () => {
   const jm = await local();
-  const notes = jm.key("C", "major").scale().generate({ start: 60, length: 8 });
+  const notes = jm.key("C", "major").scale({ start: 60, length: 8 });
   assert.equal(notes.length, 8);
   assert.equal(notes[0], 60);
 });

@@ -12,8 +12,7 @@
  *     import studio from "https://cdn.jsdelivr.net/gh/jmonlabs/studio@main/src/index.js";
  *     const jm = await studio();
  *
- *     const scale = new jm.theory.harmony.Scale({ tonic: "C", mode: "major" })
- *       .generate({ length: 8 });
+ *     const scale = jm.key("C", "major").scale({ length: 8 });
  *
  *     jm.play(piece);
  *     jm.score(piece);

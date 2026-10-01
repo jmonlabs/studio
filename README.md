@@ -34,7 +34,7 @@ await jm.wav(piece);      // a .wav download link, after an offline render
 
 | | |
 |---|---|
-| [`jmon/algo`](https://github.com/jmonlabs/algo) | `jm.key`, `jm.theory`, `jm.generative`, `jm.processors`, `jm.analysis`, `jm.utils` |
+| [`jmon/algo`](https://github.com/jmonlabs/algo) | `jm.key`, `jm.notes`, `jm.performance`, `jm.harmony`, `jm.voices`, `jm.rhythm`, `jm.generative`, `jm.analysis`, `jm.constants` |
 | [`jmon/show`](https://github.com/jmonlabs/show) | `jm.play`, `jm.score`, `jm.scoreSVG`, `jm.wav`, `jm.master` |
 | [`jmon/io`](https://github.com/jmonlabs/io) | `jm.midi`, `jm.midiBytes`, `jm.midiBase64`, `jm.midiPlayer`, `jm.midiDisplay`, `jm.midiToJmon`, `jm.parseMidiFile`, `jm.musicxml`, `jm.validate`, `jm.format` |
 | [`jmon/sound`](https://github.com/jmonlabs/sound) | `jm.instruments` |

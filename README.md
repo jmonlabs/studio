@@ -11,7 +11,7 @@ That is the whole setup. Tone.js and Verovio load on their own, at the
 versions the packages are verified against.
 
 ```js
-const notes = jm.key("C", "major").scale().generate({ start: 60, length: 8 });
+const notes = jm.key("C", "major").scale({ start: 60, length: 8 });
 
 const piece = {
   tempo: 120,
